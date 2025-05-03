@@ -1,1 +1,1 @@
-# sem-starter-kit
+# EM Starter Kit
