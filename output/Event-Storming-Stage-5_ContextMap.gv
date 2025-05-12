@@ -1,0 +1,27 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"Dev_Team1" ["margin"="0.3","orientation"="63","shape"="egg","fontsize"="16","style"="bold","label"=<<table cellspacing="0" cellborder="0" border="0"><tr><td rowspan="2"><img src='team-icon.png' /></td><td width="10px"></td><td><b>Team</b></td></tr><tr><td width="10px"></td><td>Dev_Team1</td></tr></table>>,"fontname"="sans-serif"]
+"Card_Operations" ["margin"="0.3","orientation"="159","shape"="egg","fontsize"="16","style"="bold","label"="Card_Operations\n","fontname"="sans-serif"]
+"Statements" ["margin"="0.3","orientation"="193","shape"="egg","fontsize"="16","style"="bold","label"="Statements\n","fontname"="sans-serif"]
+"Dev_Team2" ["margin"="0.3","orientation"="57","shape"="egg","fontsize"="16","style"="bold","label"=<<table cellspacing="0" cellborder="0" border="0"><tr><td rowspan="2"><img src='team-icon.png' /></td><td width="10px"></td><td><b>Team</b></td></tr><tr><td width="10px"></td><td>Dev_Team2</td></tr></table>>,"fontname"="sans-serif"]
+"Plastic_Cards" ["margin"="0.3","orientation"="62","shape"="egg","fontsize"="16","style"="bold","label"="Plastic_Cards\n","fontname"="sans-serif"]
+subgraph "cluster_GenericSubgraph" {
+graph ["imagepath"="/tmp/GraphvizJava","color"="white"]
+"Plastic_Cards" ["margin"="0.3","orientation"="197","shape"="egg","fontsize"="16","style"="bold","label"="Plastic_Cards\n","fontname"="sans-serif"]
+"Statements" ["margin"="0.3","orientation"="249","shape"="egg","fontsize"="16","style"="bold","label"="Statements\n","fontname"="sans-serif"]
+"Card_Operations" ["margin"="0.3","orientation"="72","shape"="egg","fontsize"="16","style"="bold","label"="Card_Operations\n","fontname"="sans-serif"]
+"Card_Operations" -> "Statements" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+}
+subgraph "cluster_Teams_Subgraph" {
+graph ["imagepath"="/tmp/GraphvizJava","color"="white"]
+"Dev_Team2" ["margin"="0.3","orientation"="271","shape"="egg","fontsize"="16","style"="bold","label"=<<table cellspacing="0" cellborder="0" border="0"><tr><td rowspan="2"><img src='team-icon.png' /></td><td width="10px"></td><td><b>Team</b></td></tr><tr><td width="10px"></td><td>Dev_Team2</td></tr></table>>,"fontname"="sans-serif"]
+"Dev_Team1" ["margin"="0.3","orientation"="210","shape"="egg","fontsize"="16","style"="bold","label"=<<table cellspacing="0" cellborder="0" border="0"><tr><td rowspan="2"><img src='team-icon.png' /></td><td width="10px"></td><td><b>Team</b></td></tr><tr><td width="10px"></td><td>Dev_Team1</td></tr></table>>,"fontname"="sans-serif"]
+}
+"Dev_Team1" -> "Statements" ["fontsize"="12","fontcolor"="#686868","style"="dashed","label"="  «realizes»\n","color"="#686868","fontname"="sans-serif"]
+"Dev_Team1" -> "Card_Operations" ["fontsize"="12","fontcolor"="#686868","style"="dashed","label"="  «realizes»\n","color"="#686868","fontname"="sans-serif"]
+"Dev_Team2" -> "Plastic_Cards" ["fontsize"="12","fontcolor"="#686868","style"="dashed","label"="  «realizes»\n","color"="#686868","fontname"="sans-serif"]
+}
