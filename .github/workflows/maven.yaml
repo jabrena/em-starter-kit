@@ -15,6 +15,7 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           java-version: '24'
       - name: Execute context-mapper script
-        run: sh context-mapper/script.sh
+        working-directory: context-mapper
+        run: sh script.sh
       - name: Check output directory
         run: ls -l context-mapper/output
