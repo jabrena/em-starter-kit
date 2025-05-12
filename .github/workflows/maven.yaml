@@ -16,6 +16,6 @@ jobs:
           java-version: '24'
       - name: Execute context-mapper script
         working-directory: context-mapper
-        run: sh context-mapper/script.sh
+        run: sh script.sh
       - name: Check output directory
         run: ls -l context-mapper/output
