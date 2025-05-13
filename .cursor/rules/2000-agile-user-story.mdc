@@ -1,5 +1,5 @@
 ---
-description: 
+description: Cursor rule to create Agile User stories in a conversational way
 globs: 
 alwaysApply: false
 ---
