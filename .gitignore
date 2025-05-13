@@ -2,7 +2,7 @@
 target/
 .idea/
 .vscode/
-.cursor/
+.cursor2/
 .flattened-pom.xml
 src-gen/
 *.log
